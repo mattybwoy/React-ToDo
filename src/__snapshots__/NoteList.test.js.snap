@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when there are no notes 1`] = `
+<div
+  className="Personal NoteList"
+>
+  <label>
+     Personal NoteList 
+  </label>
+  <form
+    onSubmit={[Function]}
+  >
+    <label>
+      Add ToDo: 
+      <input
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+    </label>
+    <input
+      type="submit"
+      value="Submit"
+    />
+    <input
+      onClick={[Function]}
+      type="Reset"
+    />
+  </form>
+</div>
+`;
