@@ -5,7 +5,7 @@ import NoteList from './NoteList'
 function App() {
   return (
     <div className="App">
-        <h1>Hello, World!</h1>
+        <h1>My To Do List</h1>
         < NoteList/>
     </div>
   );

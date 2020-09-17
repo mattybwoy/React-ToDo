@@ -29,22 +29,21 @@ this.handleSubmit = this.handleSubmit.bind(this);
        todo: []
      })
    }
-
+  
 render() {
   return (
-    <div className = "Personal NoteList">
-      <label> Personal NoteList </label>
+    <div className = 'Personal NoteList'>
     <form onSubmit = {this.handleSubmit}>
       <label>
-        Add ToDo: <input type="text" value={this.state.value}onChange = {this.handleChange}/>
+        Task: <input type='text' value={this.state.value}onChange = {this.handleChange}/>
       </label>
-      < input type = "submit" value = "Submit"/ >
-      <input type = "Reset" value= "Reset"onClick = {this.resetForm} />
+      <input type = 'submit' value = 'Add'/ >
+      <input type='button' value='Reset' onClick ={this.resetForm}/>
       </form>
 
       {this.state.todo.map((todo, index) => {
         return (<p key ={index}>{todo}
-        <input type="checkbox" />
+        <input type='checkbox' />
         </p>)
         })
       }

@@ -4,14 +4,11 @@ exports[`renders correctly when there are no notes 1`] = `
 <div
   className="Personal NoteList"
 >
-  <label>
-     Personal NoteList 
-  </label>
   <form
     onSubmit={[Function]}
   >
     <label>
-      Add ToDo: 
+      Task: 
       <input
         onChange={[Function]}
         type="text"
@@ -20,11 +17,12 @@ exports[`renders correctly when there are no notes 1`] = `
     </label>
     <input
       type="submit"
-      value="Submit"
+      value="Add"
     />
     <input
       onClick={[Function]}
-      type="Reset"
+      type="button"
+      value="Reset"
     />
   </form>
 </div>

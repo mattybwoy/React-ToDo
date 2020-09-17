@@ -1,3 +1,13 @@
+First project based on using React. A one page to-do list, new tasks can be added with a checkbox and list can be reset.
+
+6 tests passing currently.
+
+Testing framework - Jest
+
+Improvements
+ - CSS
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
