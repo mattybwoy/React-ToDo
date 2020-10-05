@@ -6,6 +6,8 @@ Testing framework - Jest
 
 Improvements
  - CSS
+ - Save state with local storage
+ - Remaining tasks counter function
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

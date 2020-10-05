@@ -29,6 +29,7 @@ this.handleSubmit = this.handleSubmit.bind(this);
        todo: []
      })
    }
+
   
 render() {
   return (
@@ -40,8 +41,9 @@ render() {
       <input type = 'submit' value = 'Add'/ >
       <input type='button' value='Reset' onClick ={this.resetForm}/>
       </form>
-    {/* You have {this.state.todo.length} */}
-    You have {this.state.todo.filter(todo => !todo.checked).length} tasks remaining
+      
+    You have {this.state.todo.length} Tasks
+
       {this.state.todo.map((todo, index) => {
         return (<p key ={index}>{todo}
         <input type='checkbox' />
