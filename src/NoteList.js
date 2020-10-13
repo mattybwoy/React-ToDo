@@ -1,4 +1,10 @@
 import React, { Component } from "react";
+import NoteListCSS from './Notelist.css'
+import {library } from '@fortawesome/fontawesome-svg-core';
+import {faTrash} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+library.add(faTrash);
 
 class NoteList extends Component {
 constructor(props) {
@@ -45,9 +51,12 @@ render() {
     You have {this.state.todo.length} Tasks
 
       {this.state.todo.map((todo, index) => {
-        return (<p key ={index}>{todo}
-        <input type='checkbox' />
-        </p>)
+        return (<div className="list" key ={index.key}><p>{todo} <input type='checkbox' />
+        <span>
+        <FontAwesomeIcon className="faicons" icon= 'trash'/>
+        </span>
+        </p>
+        </div>)
         })
       }
       </div>
