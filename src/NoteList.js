@@ -22,7 +22,7 @@ this.handleSubmit = this.handleSubmit.bind(this);
  handleSubmit(event) {
    this.state.todo.push(this.state.currentItem.value)
    this.setState({todo: this.state.todo});
-   this.setState({...this.setState, value: ''})
+   this.setState({...this.State, currentItem:{value: ''}})
    event.preventDefault();
  }
 
@@ -42,7 +42,7 @@ render() {
     <div className = 'Personal NoteList'>
     <form id= 'todo-form' onSubmit = {this.handleSubmit}>
       <label>
-        Task: <input type='text' value={this.state.currentItem.value}onChange = {this.handleChange}/>
+      <input type='text' placeholder= 'Enter Task' value={this.state.currentItem.value}onChange = {this.handleChange}/>
       </label>
       <button type = 'submit'>Add</button>
       <button type = 'subm it' onClick ={this.resetForm}>Reset</button>
