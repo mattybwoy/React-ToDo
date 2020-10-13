@@ -34,12 +34,12 @@ this.handleSubmit = this.handleSubmit.bind(this);
 render() {
   return (
     <div className = 'Personal NoteList'>
-    <form onSubmit = {this.handleSubmit}>
+    <form id= 'todo-form' onSubmit = {this.handleSubmit}>
       <label>
         Task: <input type='text' value={this.state.value}onChange = {this.handleChange}/>
       </label>
-      <input type = 'submit' value = 'Add'/ >
-      <input type='button' value='Reset' onClick ={this.resetForm}/>
+      <button type = 'submit'>Add</button>
+      <button type = 'submit' onClick ={this.resetForm}>Reset</button>
       </form>
       
     You have {this.state.todo.length} Tasks
