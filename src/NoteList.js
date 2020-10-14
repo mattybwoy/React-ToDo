@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NoteListCSS from './Notelist.css'
+import './Notelist.css'
 import {library } from '@fortawesome/fontawesome-svg-core';
 import {faTrash} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,6 +13,7 @@ constructor(props) {
   
 this.handleChange = this.handleChange.bind(this);
 this.handleSubmit = this.handleSubmit.bind(this);
+this.deleteItem = this.deleteItem.bind(this);
 }
 
  handleChange(event) {
@@ -36,6 +37,12 @@ this.handleSubmit = this.handleSubmit.bind(this);
      })
    }
 
+   deleteItem(key) {
+     const filteredItems = this.state.todo.filter(index => index.key!==key);
+     this.setState({
+     todo:filteredItems
+     })
+   }
   
 render() {
   return (
@@ -51,9 +58,9 @@ render() {
     You have {this.state.todo.length} Tasks
 
       {this.state.todo.map((todo, index) => {
-        return (<div className="list" key ={index.key}><p>{todo} <input type='checkbox' />
+        return (<div className="list" key={index.key}><p>{todo} <input type='checkbox' />
         <span>
-        <FontAwesomeIcon className="faicons" icon= 'trash'/>
+        <FontAwesomeIcon className="faicons" icon= 'trash' onClick={() => this.deleteItem(index.key)}/>
         </span>
         </p>
         </div>)
