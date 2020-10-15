@@ -23,22 +23,23 @@ this.deleteItem = this.deleteItem.bind(this);
  handleSubmit(event) {
    this.state.todo.push(this.state.currentItem.value)
    this.setState({todo: this.state.todo});
-   this.setState({...this.State, currentItem:{value: ''}})
+   this.setState({...this.State, currentItem:{value:''}})
    event.preventDefault();
  }
 
  handleCheckboxChange = event =>
    this.setState({checked: event.target.checked})
- 
+
    resetForm = () => {this.setState({
        ...this.state,
-       value: '',
+       currentItem:{
+       value:''},
        todo: []
      })
    }
 
    deleteItem(key) {
-     const filteredItems = this.state.todo.filter(index => index.key!==key);
+     const filteredItems = this.state.todo.filter(item => item.key!==key);
      this.setState({
      todo:filteredItems
      })
@@ -52,15 +53,15 @@ render() {
       <input type='text' placeholder= 'Enter Task' value={this.state.currentItem.value}onChange = {this.handleChange}/>
       </label>
       <button type = 'submit'>Add</button>
-      <button type = 'subm it' onClick ={this.resetForm}>Reset</button>
+      <button type = 'submit' onClick ={this.resetForm}>Reset</button>
       </form>
       
     You have {this.state.todo.length} Tasks
 
-      {this.state.todo.map((todo, index) => {
-        return (<div className="list" key={index.key}><p>{todo} <input type='checkbox' />
+      {this.state.todo.map((item) => {
+        return (<div className="list" key={item.key}><p>{item} <input type='checkbox' />
         <span>
-        <FontAwesomeIcon className="faicons" icon= 'trash' onClick={() => this.deleteItem(index.key)}/>
+        <FontAwesomeIcon className="faicons" icon= 'trash' onClick={() => this.deleteItem(item.key)}/>
         </span>
         </p>
         </div>)
