@@ -9,7 +9,7 @@ library.add(faTrash);
 class NoteList extends Component {
 constructor(props) {
   super(props)
-  this.state = { todo: [], currentItem:{ value: '', key:'' }, checked: false }
+  this.state = { todo: [], currentItem: { value: '', key:'' }, checked: false }
   
 this.handleChange = this.handleChange.bind(this);
 this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,9 +21,11 @@ this.deleteItem = this.deleteItem.bind(this);
  }
 
  handleSubmit(event) {
-   this.state.todo.push(this.state.currentItem.value)
-   this.setState({todo: this.state.todo});
-   this.setState({...this.State, currentItem:{value:''}})
+   this.setState(previousState => ({
+     todo: [...previousState.todo, this.state.currentItem]
+   }) )
+    // this.state.todo.push(this.state.currentItem)
+    this.setState({...this.State, currentItem:{value:''}})
    event.preventDefault();
  }
 
@@ -40,12 +42,14 @@ this.deleteItem = this.deleteItem.bind(this);
 
    deleteItem(key) {
      const filteredItems = this.state.todo.filter(item => item.key!==key);
+     console.log(filteredItems)
      this.setState({
-     todo:filteredItems
+     todo: filteredItems
      })
-   }
+  }
   
 render() {
+  console.log(this.state.todo)
   return (
     <div className = 'Personal NoteList'>
     <form id= 'todo-form' onSubmit = {this.handleSubmit}>
@@ -59,9 +63,9 @@ render() {
     You have {this.state.todo.length} Tasks
 
       {this.state.todo.map((item) => {
-        return (<div className="list" key={item.key}><p>{item} <input type='checkbox' />
+        return (<div className="list" key={item.key}><p>{item.value} <input type='checkbox' />
         <span>
-        <FontAwesomeIcon className="faicons" icon= 'trash' onClick={() => this.deleteItem(item.key)}/>
+        <FontAwesomeIcon className="faicons" onClick={() => this.deleteItem(item.key)} icon= 'trash' />
         </span>
         </p>
         </div>)
