@@ -6,6 +6,8 @@ First project based on using React. A one page to-do list, new tasks can be adde
 - Checkboxes have been added next to each task
 - Awesome font icons have been imported into project
 - Some CSS has been implemented
+- Individual tasks can now be deleted
+- Task counter correctly referencing task number
 
 ## Testing
 Testing framework - Jest
@@ -14,9 +16,8 @@ Testing framework - Jest
 ## Improvements
  - CSS
  - Save state with local storage
- - Remaining tasks counter function
- - Individual delete function for each task
  - Editing of current tasks
+ - Animation
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

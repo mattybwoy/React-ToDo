@@ -40,6 +40,7 @@ this.deleteItem = this.deleteItem.bind(this);
      })
    }
 
+
    deleteItem(key) {
      const filteredItems = this.state.todo.filter(item => item.key!==key);
      console.log(filteredItems)
