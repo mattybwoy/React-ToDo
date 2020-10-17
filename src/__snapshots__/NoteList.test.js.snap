@@ -5,25 +5,31 @@ exports[`renders correctly when there are no notes 1`] = `
   className="Personal NoteList"
 >
   <form
+    id="todo-form"
     onSubmit={[Function]}
   >
     <label>
-      Task: 
       <input
         onChange={[Function]}
+        placeholder="Enter Task"
         type="text"
         value=""
       />
     </label>
-    <input
+    <button
       type="submit"
-      value="Add"
-    />
-    <input
+    >
+      Add
+    </button>
+    <button
       onClick={[Function]}
-      type="button"
-      value="Reset"
-    />
+      type="reset"
+    >
+      Reset
+    </button>
   </form>
+  You have 
+  0
+   Tasks Remaining
 </div>
 `;

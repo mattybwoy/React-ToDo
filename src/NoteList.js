@@ -33,17 +33,13 @@ this.deleteItem = this.deleteItem.bind(this);
    this.setState({checked: event.target.checked})
 
    resetForm = () => {this.setState({
-       ...this.state,
-       currentItem:{
-       value:''},
-       todo: []
+       todo: [],
      })
    }
 
 
    deleteItem(key) {
      const filteredItems = this.state.todo.filter(item => item.key!==key);
-     console.log(filteredItems)
      this.setState({
      todo: filteredItems
      })
@@ -58,10 +54,10 @@ render() {
       <input type='text' placeholder= 'Enter Task' value={this.state.currentItem.value}onChange = {this.handleChange}/>
       </label>
       <button type = 'submit'>Add</button>
-      <button type = 'submit' onClick ={this.resetForm}>Reset</button>
+      <button type = 'reset' onClick ={this.resetForm}>Reset</button>
       </form>
       
-    You have {this.state.todo.length} Tasks
+    You have {this.state.todo.length} Tasks Remaining
 
       {this.state.todo.map((item) => {
         return (<div className="list" key={item.key}><p>{item.value} <input type='checkbox' />
