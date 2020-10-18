@@ -9,6 +9,7 @@ First project based on using React. A one page to-do list, new tasks can be adde
 - Individual tasks can now be deleted
 - Task counter correctly referencing task number
 - Reset function working correctly
+- Blank tasks cannot be added
 
 ## Testing
 Testing framework - Jest
@@ -20,7 +21,6 @@ Testing framework - Jest
  - Save state with local storage
  - Editing of current tasks
  - Animation
- - Prevention of blank tasks added
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -21,11 +21,16 @@ this.deleteItem = this.deleteItem.bind(this);
  }
 
  handleSubmit(event) {
+   if (this.state.currentItem.value ==='') {
+     alert("Please enter a task");
+   } 
+   else {
    this.setState(previousState => ({
      todo: [...previousState.todo, this.state.currentItem]
-   }) )
+   }) ) 
     // this.state.todo.push(this.state.currentItem)
     this.setState({...this.State, currentItem:{value:''}})
+  }
    event.preventDefault();
  }
 
