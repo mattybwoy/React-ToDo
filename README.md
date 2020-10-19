@@ -12,9 +12,8 @@ First project based on using React. A one page to-do list, new tasks can be adde
 - Blank tasks cannot be added
 
 ## Testing
-Testing framework - Jest
-5 Passing
-1 Failure
+Testing framework - Jest <br>
+6 Passing
 
 ## Improvements
  - CSS
