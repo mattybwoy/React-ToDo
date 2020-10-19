@@ -67,7 +67,7 @@ render() {
       {this.state.todo.map((item) => {
         return (<div className="list" key={item.key}><p>{item.value} <input type='checkbox' />
         <span>
-        <FontAwesomeIcon className="faicons" onClick={() => this.deleteItem(item.key)} icon= 'trash' />
+        <FontAwesomeIcon className="faicons" onClick={() => this.deleteItem(item.key)} icon= 'trash' title='deletion'/>
         </span>
         </p>
         </div>)

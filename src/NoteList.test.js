@@ -1,22 +1,25 @@
 import React from 'react';
 import '@testing-library/jest-dom'
-import { render,screen } from '@testing-library/react'
+import { getAllByTitle, render,screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import renderer from 'react-test-renderer';
 import App from './App';
 import NoteList from './NoteList'
+import {library } from '@fortawesome/fontawesome-svg-core';
+import {faTrash} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 test('renders correctly when there are no notes', () => {
   const tree = renderer.create(<NoteList />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
-test('Show Task text next to textbox', () => {
+test('Show remaining tasks', () => {
   render(<App /> );
-  expect(screen.getByText('Task:')).toBeInTheDocument()
+  expect(screen.getByText('You have 0 Tasks Remaining')).toBeInTheDocument()
 });
 
-test('user can add a note', () => {
+test('user can add a task', () => {
   render(<NoteList /> );
   const textBox = screen.getByRole('textbox');
   userEvent.type(textBox, 'A task')
@@ -26,6 +29,20 @@ test('user can add a note', () => {
   expect(note).toBeInTheDocument();
 });
 
+// test('user can delete a task', () => {
+//   render (<NoteList />);
+//   const textBox = screen.getByRole('textbox');
+//   userEvent.type(textBox, 'A Task')
+//   userEvent.click(screen.getByText('Add'))
+//   const note = screen.getAllByText('A Task')
+//   //userEvent.click(screen.getByTitle('deletion'))
+//   const deletion = screen.queryByTitle('deletion')
+//   expect(deletion).toBeVisible();
+//   //expect(getAllByTitle('deletion')).toBeVisible();
+//   //expect(note).not.toBeInTheDocument();
+
+// })
+
 test('user see checkbox next to todo', () => {
   render(<NoteList />);
   const textBox = screen.getByRole('textbox');
@@ -34,7 +51,7 @@ test('user see checkbox next to todo', () => {
   const note = screen.getByText('A task');
   const checkbox = screen.getByRole('checkbox')
   expect(checkbox).toBeInTheDocument();
-});
+})
 
 test('user can reset todo list', () => {
 render(<NoteList />);
