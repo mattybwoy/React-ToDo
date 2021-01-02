@@ -31,5 +31,18 @@ exports[`renders correctly when there are no notes 1`] = `
   You have 
   0
    Tasks Remaining
+  <footer>
+    <strong>
+      A MATTYBWOY CREATION
+    </strong>
+    <br />
+    Powered by React
+    <br />
+    <img
+      alt="https://reactjs.org/"
+      src="logo.svg"
+      width="40"
+    />
+  </footer>
 </div>
 `;

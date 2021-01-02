@@ -1,3 +1,12 @@
+<p align="center">
+  <a href="https://reactjs.org/">
+    <img alt="React" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Personal Notelist
+</h1>
+
 ## Objective
 First project based on using React. A one page to-do list, new tasks can be added with a checkbox and list can be reset.
 
@@ -11,15 +20,19 @@ First project based on using React. A one page to-do list, new tasks can be adde
 - Reset function working correctly
 - Blank tasks cannot be added
 
-## Testing
-Testing framework - Jest <br>
-6 Passing
+## Testing (Jest)
+7 Passing
 
 ## Improvements
  - CSS
  - Save state with local storage
  - Editing of current tasks
  - Animation
+
+ ## Installation
+- Git clone repository
+- Type into terminal ```npm install```
+- Type into terminal ```yarn start```
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
