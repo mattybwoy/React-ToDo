@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './Notelist.css'
+import logo from './logo.svg'
 import {library } from '@fortawesome/fontawesome-svg-core';
 import {faTrash} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -73,6 +74,9 @@ render() {
         </div>)
         })
       }
+      <footer><strong>A MATTYBWOY CREATION</strong><br/>Powered by React<br></br>
+      <img src = {logo} alt="https://reactjs.org/" width= "40"></img>
+      </footer>
       </div>
   )
 }
