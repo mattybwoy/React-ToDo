@@ -34,6 +34,18 @@ React Hooks are also experimented with as an alternative to classes.
 - Type into terminal ```npm install```
 - Type into terminal ```yarn start```
 
+## Screenshots
+![Image1](./public/image1.png)
+<br>
+Default screen
+
+![Image2](./public/image2.png)
+<br>
+Screen with 1 Task
+
+
+## Tech Stack
+HTML, CSS, Javascript, React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
