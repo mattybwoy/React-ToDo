@@ -9,6 +9,7 @@
 
 ## Objective
 First project based on using React. A one page to-do list, new tasks can be added with a checkbox and list can be reset.
+React Hooks are also experimented with as an alternative to classes.
 
 ## Progress
 - Tasks can be added
@@ -24,7 +25,6 @@ First project based on using React. A one page to-do list, new tasks can be adde
 7 Passing
 
 ## Improvements
- - CSS
  - Save state with local storage
  - Editing of current tasks
  - Animation

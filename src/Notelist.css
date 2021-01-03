@@ -21,6 +21,18 @@
   cursor: pointer;
 }
 
+#addB {
+  margin-right: 10px;
+}
+#addB:hover {
+  background-color:burlywood;
+}
+
+
+#resetB:hover{
+  background-color: darkred;
+}
+
 .faicons{
   margin: 0 5px;
   font-size:15px;

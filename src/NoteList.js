@@ -59,11 +59,11 @@ render() {
       <label>
       <input type='text' placeholder= 'Enter Task' value={this.state.currentItem.value}onChange = {this.handleChange}/>
       </label>
-      <button type = 'submit'>Add</button>
-      <button type = 'reset' onClick ={this.resetForm}>Reset</button>
+      <button id = "addB" type = 'submit'>Add</button>
+      <button id = "resetB" type = 'reset' onClick ={this.resetForm}>Reset</button>
       </form>
       
-    You have {this.state.todo.length} Tasks Remaining
+    <strong>You have {this.state.todo.length} Tasks Remaining</strong>
 
       {this.state.todo.map((item) => {
         return (<div className="list" key={item.key}><p>{item.value} <input type='checkbox' />
